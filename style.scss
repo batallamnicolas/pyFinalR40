@@ -1,0 +1,79 @@
+// PALETA DE COLORES
+$color1: #161616;
+$color2:#242424;
+$color3:#fff;
+$color4:#F84000;
+$color5:#F28800;
+$color6:#ffc38c;
+
+// Mixins
+@mixin sizes ($height, $width, $bcolor) {
+    height: $height;
+    width: $width;
+    background-color: $bcolor;
+}
+
+// CODIGO ESTILO
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $color3;
+}
+
+// NAVBAR
+.navbar {
+    z-index: 1;
+    border-bottom: 2px solid $color5;
+    background-image: radial-gradient(circle, #444444, #343434, #242424, #161616, #000000);
+
+    .navbar-brand {
+        font-size: 20px;
+        font-family: 'M PLUS 1', sans-serif;
+        font-weight: 500;
+        color: $color5;
+    }
+
+    .navegacion li a {
+        font-size: 18px;
+        font-family: 'M PLUS 1', sans-serif;
+    }
+}
+
+// FIN NAVBAR
+
+// INDEX
+@import "_index";
+
+// INICIO
+@import "_inicio";
+
+//RECORRIDO
+@import "_recorrido";
+
+// HISTORIA
+@import "_datos";
+
+// FOTOS
+@import "_fotos";
+
+// FOOTER
+footer {
+    border-top: 2px solid $color5;
+    color: $color5;
+    background-image: radial-gradient(circle, #444444, #343434, #242424, #161616, #000000);
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    a {
+        i {
+            font-size: 35px;
+            color: $color5;
+        }
+    }
+}

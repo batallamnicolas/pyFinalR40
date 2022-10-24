@@ -1,0 +1,266 @@
+// TITULO DATOS
+.opacity {
+    overflow: hidden;
+    @include sizes (500px, 100%, $color2);
+    position: relative;
+    background-position: center;
+
+    .imagenFondo {
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        background-image: url(../img/FitzRoy.jpg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    .tituloDatos {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40%;
+        text-align: center;
+
+        h1 {
+            color: $color3;
+            font-size: 350%;
+            font-weight: 500;
+
+            span {
+                color: $color5;
+            }
+        }
+
+        p {
+            color: $color3;
+            font-size: 20px;
+
+            strong {
+                color: $color5;
+            }
+        }
+    }
+}
+
+// CONTENEDOR
+.contDatos {
+    background-image: url(../img/fondovert.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0 20px 0;
+}
+
+/* DATOS */
+.contTransparente {
+    box-shadow: 0 20px 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.788);
+    position: relative;
+    top: -100px;
+    bottom: 0;
+
+    // EPOCAS
+    .titulo-epoca {
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+
+        img {
+            max-height: 200px;
+            max-width: 250px;
+        }
+
+        h2 {
+            font-family: cursive;
+            font-weight: 500;
+            font-size: 230%;
+            color: $color1;
+
+            span {
+                font-family: sans-serif;
+                font-weight: 700;
+                font-size: 130%;
+                color: $color4;
+            }
+        }
+    }
+
+    .texto-epoca {
+        p {
+            text-align: justify;
+            color: $color1;
+            font-size: 110%;
+            font-family: 'M PLUS 1', sans-serif;
+            font-weight: 500;
+
+            span {
+                color: $color1;
+                font-size: 110%;
+                font-weight: 700;
+            }
+
+            strong {
+                color: $color4;
+                font-size: 110%;
+            }
+
+            ul {
+                li {
+                    list-style: square;
+                }
+            }
+        }
+
+
+    }
+
+    // TIEMPO
+    .tituloTiempo {
+        @extend .titulo-epoca;
+    }
+
+    .textoTiempo {
+        @extend .texto-epoca;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        h6 {
+            color: $color4;
+            font-size: 130%;
+            font-weight: 700;
+        }
+
+        img {
+            object-fit: cover;
+            height: 300px;
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+    }
+
+    // EQUIPAJE
+    .tituloEquipaje {
+        @extend .titulo-epoca;
+        justify-content: space-around;
+
+        img {
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+    }
+
+    .textoEquipaje {
+        @extend .texto-epoca;
+        padding-bottom: 100px;
+    }
+
+
+}
+
+// MEDIA QUERYS
+
+@media only screen and (max-width:992px) {
+    .contTransparente {
+
+        .titulo-epoca {
+            justify-content: center;
+
+            h2 {
+                font-size: 180%;
+
+                span {
+                    font-size: 120%;
+                }
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .opacity {
+
+        .tituloDatos {
+            h1 {
+                font-size: 250%;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .contDatos {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+
+        .contTransparente {
+
+            .row {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .opacity {
+
+        .tituloDatos {
+            h1 {
+                font-size: 200%;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .contDatos {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+
+        .contTransparente {
+
+            .row {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .titulo-epoca {
+                h2 {
+                    font-size: 150%;
+
+                    span {
+                        font-size: 110%;
+                    }
+                }
+            }
+
+            .texto-epoca {
+
+                font-size: 90%;
+            }
+
+            .textoTiempo {
+                img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

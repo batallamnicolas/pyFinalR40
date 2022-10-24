@@ -1,0 +1,195 @@
+/* Main DESARROLLO */
+.bodyInicio {
+    background-image: url(../img/fondovert.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+}
+
+// MAPA
+.secMapa {
+    box-shadow: 0 20px 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.788);
+
+    h1 {
+        font-family: cursive;
+        font-weight: 500;
+        font-size: 300%;
+        text-align: center;
+
+        span {
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 120%;
+            color: $color4;
+        }
+    }
+
+    p {
+        font-size: 115%;
+        padding: 0 50px;
+        text-align: justify;
+    }
+}
+
+// CARRUSEL
+
+.carousel-item {
+    @include sizes (600px, 100%, $color2);
+    color: $color3;
+    position: relative;
+    background-position: center;
+
+
+    .overlay-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.7;
+    }
+
+    .titulo-item {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+}
+
+// OPINIONES
+.SecOpiniones {
+    box-shadow: 5px 5px 10px;
+    border-radius: 50px;
+
+    .titulo-opiniones {
+        max-height: 200px;
+        text-align: justify;
+
+        div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 50px;
+
+            img {
+                max-height: 200px;
+            }
+
+            h2 {
+                font-family: cursive;
+                font-weight: 500;
+                font-size: 250%;
+                text-align: center;
+
+                span {
+                    font-family: sans-serif;
+                    font-weight: 700;
+                    font-size: 130%;
+                    color: $color4;
+                }
+            }
+        }
+    }
+
+    .opiniones {
+        margin-top: 100px;
+
+        p {
+            border: 3px solid $color5;
+            border-radius: 30px;
+            box-shadow: 5px 5px 10px;
+            text-align: justify;
+            padding: 30px 10px;
+
+            span {
+                font-family: sans-serif;
+                font-weight: 700;
+                font-size: 120%;
+                color: $color4;
+            }
+        }
+
+        .opi:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+// FIN OPINIONES
+
+// MEDIAS QUERYS
+
+@media only screen and (max-width:440px) {
+    .SecOpiniones {
+        border-radius: 0;
+
+        .titulo-opiniones {
+            div {
+
+                h2 {
+                    font-size: 150%;
+                }
+
+                span {
+                    font-size: 100%;
+                }
+
+                .dibujo1 {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .secMapa {
+        h1 {
+            font-size: 250%;
+        }
+
+        p {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width:700px) {
+    .secMapa {
+        iframe {
+            width: 300px;
+        }
+    }
+}
+
+@media only screen and (max-width:996px) {
+    .SecOpiniones {
+        .titulo-opiniones {
+            div {
+
+                h2 {
+                    font-size: 200%;
+                }
+
+                span {
+                    font-size: 110%;
+                }
+
+                .dibujo2 {
+                    display: none;
+                }
+            }
+        }
+    }
+}

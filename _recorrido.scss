@@ -1,0 +1,58 @@
+.body {
+    background-image: url(../img/fondovert.svg);
+    background-position: center;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0 20px 0;
+}
+
+.SecRecorrido {
+
+    h1 {
+        font-family: cursive;
+        font-weight: 500;
+        font-size: 300%;
+
+        span {
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 130%;
+            color: $color4;
+        }
+    }
+
+    .row {
+        box-shadow: 5px 5px 10px;
+
+        .texto {
+            text-align: justify;
+            align-self: center;
+
+            span {
+                font-family: sans-serif;
+                font-weight: 700;
+                font-size: 130%;
+                color: $color4;
+            }
+        }
+    }
+}
+
+// MEDIA QUERYS
+
+@media only screen and (max-width:576px) {
+    .body {
+        background-image: none;
+    }
+}
+
+@media only screen and (min-width:779px) and (max-width:992px) {
+    .SecRecorrido {
+        .row {
+            img:active {
+                transform: scale(2)
+            }
+        }
+    }
+}

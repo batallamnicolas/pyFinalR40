@@ -1,0 +1,255 @@
+// HEADER
+header {
+    background-image: url(../img/pexels-sebastian-beck-2397262.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    border-bottom: 3px solid $color5;
+
+    h1 {
+        @include sizes (70px, 100%, rgba(255, 255, 255, 0.651));
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .btn {
+        animation-iteration-count: infinite;
+        min-width: 170px;
+        max-width: 200px;
+        height: 40px;
+        color: $color5;
+        padding: 5px 10px;
+        font-family: 'M PLUS 1', sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 7px;
+        border: none;
+        background-size: 120% auto;
+        background-image: linear-gradient(315deg, $color3 0%, $color2 75%);
+        box-shadow: 0 5px $color2;
+    }
+
+    .btn:hover {
+        animation-iteration-count: 0;
+        background-position: right center;
+        box-shadow: 0 3px $color2;
+        top: 3px;
+    }
+
+    .btn:active {
+        box-shadow: 0 0 $color2;
+        top: 5px;
+    }
+}
+
+// FIN HEADER
+// SEPARADOR
+.separador {
+    height: 150px;
+    background-image: radial-gradient(circle, #444444, #343434, #242424, #161616, #000000);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 60% 80%, 50% 100%, 40% 80%, 0 80%);
+    margin-bottom: 0;
+    padding-top: 10px;
+
+    .row {
+        width: 100%;
+
+        div {
+            font-size: 40px;
+            color: $color3;
+        }
+    }
+}
+
+// CONTENEDOR
+.fondo {
+    background-image: url(../img/fondovert.svg);
+    background-position: center;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -30px;
+}
+
+// MAIN TITULO
+.text1 {
+    @include sizes (auto, 100%, none);
+    text-align: justify;
+    color: $color1;
+    font-size: 100%;
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 500;
+    box-shadow: 5px 5px 10px;
+    border-radius: 50px;
+
+    .rowImg {
+        justify-content: center;
+
+        .imgdist {
+            clip-path: polygon(100% 0, 0 0, 50% 100%);
+            margin-left: -75px;
+            margin-right: -75px;
+        }
+
+        img {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            max-width: 200px;
+        }
+    }
+
+    h2 {
+        font-family: cursive;
+        font-weight: 500;
+        font-size: 250%;
+        color: $color1;
+
+        span {
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 130%;
+            color: $color4;
+        }
+    }
+
+    strong {
+        color: $color4;
+        font-size: 120%;
+        font-weight: 700;
+    }
+}
+
+// FIN CONTENEDOR
+/* FORM DESARROLLO */
+
+.formulario {
+    // background-image: radial-gradient(circle, #a1a1a1, #818181, #626262, #444444, #292929, #1e1e1e, #121212, #000000, #000000, #000000, #000000, #000000);
+    background-image: url(../img/fondonegro.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    h3 {
+        color: $color4;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 35px;
+    }
+
+    label {
+        color: $color5;
+        font-weight: 700;
+    }
+
+    .btn {
+        min-width: 130px;
+        height: 40px;
+        color: $color5;
+        padding: 5px 10px;
+        font-family: 'M PLUS 1', sans-serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 7px;
+        border: none;
+        background-size: 120% auto;
+        background-image: linear-gradient(315deg, #bdc3c7 0%, $color2 75%);
+        box-shadow: 0 5px $color2;
+    }
+
+    .btn:hover {
+        background-position: right center;
+        box-shadow: 0 3px $color2;
+        top: 3px;
+    }
+}
+
+
+// MEDIAS QUERIS
+
+@media only screen and (max-width:996px) {
+    .text1 {
+        .rowImg {
+            .resp {
+                display: none;
+            }
+        }
+    }
+
+    .separador {
+        padding-top: 25px;
+
+        .row {
+
+            div {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .text1 {
+        .rowImg {
+            .imgdist {
+                margin-left: -50px;
+                margin-right: -50px;
+            }
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:440px) {
+    header h1 {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .separador {
+        .row {
+            div {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .text1 {
+        border-radius: 0;
+
+        .rowImg {
+            img {
+                display: none;
+            }
+        }
+
+        div {
+            padding: 10px !important;
+        }
+
+        h1 {
+            font-size: 200%;
+        }
+    }
+
+    .formulario {
+        h3 {
+            font-size: 180%;
+        }
+    }
+
+    footer {
+        .arriba {
+            display: none;
+        }
+    }
+}
